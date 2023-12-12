@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+    />
+    <title>Simple Text Editor</title>
+  </head>
+  <body>
+    <div id="editor">
+      <textarea id="textArea" cols="30" rows="30"></textarea>
+    </div>
+
+    <div id="toolbar">
+      
+      <input type="color" id="colorPicker" onchange="changeColor()" />
+
+      <button class="button-10" role="button" onclick="increaseTextSize()">Increase Text Size(+)</button>
+      <button class="button-10" role="button" onclick="decreaseTextSize()">Decrease Text Size(-)</button>
+
+      <select id="fontSelector" onchange="changeFont()">
+        <option value="'Times New Roman', serif">Times New Roman</option>
+        <option value="'Open Sans', sans-serif">Open Sans (Google Font)</option>
+        <option value="Roboto, sans-serif">Roboto</option>
+        <option value="'Dancing Script', cursive">Dancing Script</option>
+        <option value="Montserrat, sans-serif">Montserrat</option>
+        <option value="Oswald, sans-serif">Oswald</option>
+        <option value="Lato, sans-serif">Lato</option>
+        <option value="Roboto Condensed, sans-serif">Roboto Condensed</option>
+        <option value="Inconsolata, monospace">Inconsolata</option>
+        <option value="'Playfair Display', serif">Playfair Display</option>
+      </select>
+      <br><br> <br>
+      <button class="button-10" role="button" onclick="undo()">Undo</button>
+      <button class="button-10" role="button" onclick="redo()">Redo</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
